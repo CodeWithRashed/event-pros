@@ -6,7 +6,7 @@ import BLogsPage from "../Pages/BlogsPage";
 import AboutUsPage from "../Pages/AboutUsPage";
 import GetQuotePage from "../Pages/GetQuotePage";
 import ContactUsPage from "../Pages/ContactUsPage";
-import LoginRegisterPage from "../Pages/LoginRegisterPage";
+import UserAuthFormPage from "../Pages/UserAuthFormPage";
 import Page404 from "../Pages/Page404";
 import SingleServicePage from "../Pages/SingleServicePage";
 
@@ -23,7 +23,7 @@ const Routes = createBrowserRouter([
       { path: "/about", element: <AboutUsPage></AboutUsPage> },
       { path: "/quote", element: <GetQuotePage></GetQuotePage> },
       { path: "/contact-us", element: <ContactUsPage></ContactUsPage> },
-      { path: "/login", element: <LoginRegisterPage></LoginRegisterPage> },
+      { path: "/login", element: <UserAuthFormPage></UserAuthFormPage> },
     ],
   },
 ]);
