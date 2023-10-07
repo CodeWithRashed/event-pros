@@ -7,8 +7,8 @@ export default {
       current: "currentColor",
       "color-primary": "#ffd909",
       "color-secondary": "#ff5f6a",
-      "text-main": "#2b2b2b",
-      "text-sub":"#9d9c9b"
+      "color-main": "#2b2b2b",
+      "color-sub": "#9d9c9b",
     },
     extend: {
       fontFamily: {

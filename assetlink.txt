@@ -1,0 +1,6 @@
+https://partymaker.ancorathemes.com/wp-content/uploads/2018/01/home1_slide1.jpg //Slider Image 1
+https://partymaker.ancorathemes.com/wp-content/uploads/2018/01/promo_bg.jpg?id=627 //Slider Image 2
+https://partymaker.ancorathemes.com/wp-content/uploads/2018/01/home1_slide2.jpg //Slider Image 3
+
+https://partymaker.ancorathemes.com/wp-content/uploads/2017/10/bg-11.jpg //Slider-item-2
+https://partymaker.ancorathemes.com/wp-content/uploads/2017/10/gallery-4.jpg //Slider-item-1
