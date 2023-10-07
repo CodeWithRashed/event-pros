@@ -3,7 +3,7 @@ import TeamCard from "./TeamCard";
 
 const TeamSection = () => {
   return (
-    <div>
+    <div className="px-[5%] py-[5%]">
       <SectionTitle></SectionTitle>
       <TeamCard></TeamCard>
     </div>

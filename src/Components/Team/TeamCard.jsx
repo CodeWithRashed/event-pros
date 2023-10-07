@@ -1,6 +1,6 @@
 const TeamCard = () => {
   return (
-    <div className="flex gap-4 px-[5%] py-[5%] justify-between">
+    <div className="flex gap-4 justify-between">
       <div className="card rounded-lg overflow-hidden">
         <img
           className="w-[250px] h-[250px]"

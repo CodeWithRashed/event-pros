@@ -8,6 +8,7 @@ import GetQuotePage from "../Pages/GetQuotePage";
 import ContactUsPage from "../Pages/ContactUsPage";
 import LoginRegisterPage from "../Pages/LoginRegisterPage";
 import Page404 from "../Pages/Page404";
+import SingleServicePage from "../Pages/SingleServicePage";
 
 const Routes = createBrowserRouter([
   {
@@ -17,6 +18,7 @@ const Routes = createBrowserRouter([
     children: [
       { path: "/", element: <HomePage></HomePage> },
       { path: "/services", element: <ServicesPage></ServicesPage> },
+      { path: "/service/:id", element: <SingleServicePage></SingleServicePage> },
       { path: "/blogs", element: <BLogsPage></BLogsPage> },
       { path: "/about", element: <AboutUsPage></AboutUsPage> },
       { path: "/quote", element: <GetQuotePage></GetQuotePage> },

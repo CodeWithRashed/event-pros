@@ -1,18 +1,18 @@
-import slider1Image from "../../assets/Banner/slide1.jpg";
-import slider2Image from "../../assets/Banner/slide2.jpg";
-import slider3Image from "../../assets/Banner/slide3.jpg";
-import cardPhoto1 from "../../assets/Banner/item-0.jpg";
-import cardPhoto2 from "../../assets/Banner/item-1.jpg";
+import slider1Image from "../../../assets/Banner/slide1.jpg";
+import slider2Image from "../../../assets/Banner/slide2.jpg";
+import slider3Image from "../../../assets/Banner/slide3.jpg";
+import cardPhoto1 from "../../../assets/Banner/item-0.jpg";
+import cardPhoto2 from "../../../assets/Banner/item-1.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 // import required modules
 import { Autoplay, Pagination } from "swiper/modules";
-import { MainButton } from "../Buttons/Buttons";
+import { MainButton } from "../../Buttons/Buttons";
 
 const Banner = () => {
   return (
-    <div className="px-[5%] pt-[1%]">
+    <div className="px-[5%] pt-[1%]  pb-[5%]">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
