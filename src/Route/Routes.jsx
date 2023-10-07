@@ -18,7 +18,7 @@ const Routes = createBrowserRouter([
     children: [
       { path: "/", element: <HomePage></HomePage> },
       { path: "/services", element: <ServicesPage></ServicesPage> },
-      { path: "/service/:id", element: <SingleServicePage></SingleServicePage> },
+      { path: "/services/:id", element: <SingleServicePage></SingleServicePage> },
       { path: "/blogs", element: <BLogsPage></BLogsPage> },
       { path: "/about", element: <AboutUsPage></AboutUsPage> },
       { path: "/quote", element: <GetQuotePage></GetQuotePage> },

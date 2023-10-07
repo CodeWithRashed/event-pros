@@ -1,7 +1,12 @@
+
+import ServiceContainer from "../Components/ServiceSection/ServiceContainer"
+
+
 const ServicesPage = () => {
+
   return (
     <div>
-      this is services page
+      <ServiceContainer></ServiceContainer>
     </div>
   )
 }

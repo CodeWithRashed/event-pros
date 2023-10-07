@@ -3,9 +3,9 @@ import { SubButton } from "../Buttons/Buttons";
 
 const ServiceCard = ({ service }) => {
   const {id, name, image, price, short_description } = service;
-  console.log(name, image, price, short_description);
+
   return (
-    <div className="bg-[#fff] max-h-full p-1 rounded-lg ">
+    <div className="bg-[#fff] max-h-full p-1 rounded-lg hover:shadow-md hover:scale-[103%] transition-all ease-in-out">
       <div className="image w-84 h-56 overflow-hidden">
         <img
           src={image}
@@ -24,7 +24,7 @@ const ServiceCard = ({ service }) => {
         </div>
 
         <div className="cta">
-          <Link to={`/service/${id}`}> <SubButton buttonText="Learn More"></SubButton></Link>
+          <Link to={`/services/${id}`}> <SubButton buttonText="Learn More"></SubButton></Link>
          
         </div>
       </div>
