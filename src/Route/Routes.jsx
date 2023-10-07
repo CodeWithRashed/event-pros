@@ -1,0 +1,29 @@
+import { createBrowserRouter } from "react-router-dom";
+import MainLayout from "../Layout/MainLayout";
+import HomePage from "../Pages/HomePage";
+import ServicesPage from "../Pages/ServicesPage";
+import BLogsPage from "../Pages/BlogsPage";
+import AboutUsPage from "../Pages/AboutUsPage";
+import GetQuotePage from "../Pages/GetQuotePage";
+import ContactUsPage from "../Pages/ContactUsPage";
+import LoginRegisterPage from "../Pages/LoginRegisterPage";
+import Page404 from "../Pages/Page404";
+
+const Routes = createBrowserRouter([
+  {
+    path: "/",
+    element: <MainLayout></MainLayout>,
+    errorElement:<Page404></Page404>,
+    children: [
+      { path: "/", element: <HomePage></HomePage> },
+      { path: "/services", element: <ServicesPage></ServicesPage> },
+      { path: "/blogs", element: <BLogsPage></BLogsPage> },
+      { path: "/about", element: <AboutUsPage></AboutUsPage> },
+      { path: "/quote", element: <GetQuotePage></GetQuotePage> },
+      { path: "/contact-us", element: <ContactUsPage></ContactUsPage> },
+      { path: "/login", element: <LoginRegisterPage></LoginRegisterPage> },
+    ],
+  },
+]);
+
+export default Routes;
