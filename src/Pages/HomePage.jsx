@@ -1,10 +1,11 @@
 import Banner from "../Components/Banner/Banner"
+import TeamSection from "../Components/Team/TeamSection"
 
 const HomePage = () => {
   return (
     <div>
       <Banner></Banner>
-      this is homepage
+      <TeamSection></TeamSection>
     </div>
   )
 }

@@ -12,7 +12,7 @@ import { MainButton } from "../Buttons/Buttons";
 
 const Banner = () => {
   return (
-    <div className="mt-8">
+    <div className="px-[5%] pt-[1%]">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
