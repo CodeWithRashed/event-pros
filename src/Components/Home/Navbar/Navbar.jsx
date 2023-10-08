@@ -2,179 +2,181 @@ import { NavLink } from "react-router-dom";
 import Logo from "/logo.png";
 import { useContext } from "react";
 import { AuthDataContext } from "../../../ContextApi/DataContext";
+import { FiMenu } from "react-icons/fi";
+import { ImUserPlus } from "react-icons/im";
 
 const Navbar = () => {
-  const {user, logoutUser} = useContext(AuthDataContext)
-const doLogout = () =>{
-  logoutUser()
-  .then(() => {
-    console.log( "Sign-out successful.");
-  })
-  .catch((error) => {
-    console.log(error);
-  });
-}
+  const { user, userInfo, logoutUser } = useContext(AuthDataContext);
+  console.log("navuser", userInfo);
+  const navItems = (
+    <div className="lg:flex gap-2 items-center mr-3 hidden font-bold">
+      <NavLink
+        className={({ isActive }) => (isActive ? "text-color-secondary" : "")}
+        to="/"
+      >
+        Home
+      </NavLink>
+      <NavLink
+        className={({ isActive }) => (isActive ? "text-color-secondary" : "")}
+        to="/services"
+      >
+        Services
+      </NavLink>
+      <NavLink
+        className={({ isActive }) => (isActive ? "text-color-secondary" : "")}
+        to="/blogs"
+      >
+        Blogs
+      </NavLink>
+      <NavLink
+        className={({ isActive }) => (isActive ? "text-color-secondary" : "")}
+        to="/about"
+      >
+        About Us
+      </NavLink>
+      <NavLink
+        className={({ isActive }) => (isActive ? "text-color-secondary" : "")}
+        to="/quote"
+      >
+        Get a Quote
+      </NavLink>
+      <NavLink
+        className={({ isActive }) => (isActive ? "text-color-secondary" : "")}
+        to="/contact-us"
+      >
+        Contact Us
+      </NavLink>
+    </div>
+  );
 
+  const navItemsMobile = (
+    <div className="flex flex-col gap-2 items-center font-bold">
+      <NavLink
+        className={({ isActive }) => (isActive ? "text-color-secondary" : "")}
+        to="/"
+      >
+        Home
+      </NavLink>
+      <NavLink
+        className={({ isActive }) => (isActive ? "text-color-secondary" : "")}
+        to="/services"
+      >
+        Services
+      </NavLink>
+      <NavLink
+        className={({ isActive }) => (isActive ? "text-color-secondary" : "")}
+        to="/blogs"
+      >
+        Blogs
+      </NavLink>
+      <NavLink
+        className={({ isActive }) => (isActive ? "text-color-secondary" : "")}
+        to="/about"
+      >
+        About Us
+      </NavLink>
+      <NavLink
+        className={({ isActive }) => (isActive ? "text-color-secondary" : "")}
+        to="/quote"
+      >
+        Get a Quote
+      </NavLink>
+      <NavLink
+        className={({ isActive }) => (isActive ? "text-color-secondary" : "")}
+        to="/contact-us"
+      >
+        Contact Us
+      </NavLink>
+    </div>
+  );
+  const doLogout = () => {
+    logoutUser()
+      .then(() => {
+        console.log("Sign-out successful.");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <div className="px-[5%] pt-[2%]">
-      <div className="navbar !m-0 !p-0 font-rubik text-lg font-bold  ">
-        <div className="navbar-start flex justify-between  !m-0 !p-0">
+      <div className="navbar">
+        {/* Navbar Start Part */}
+        <div className="flex-1">
           <NavLink to="/" className="logo">
             <img src={Logo} alt="" className="h-20" />
           </NavLink>
         </div>
-        <div className="navbar-end lg:flex w-full !m-0 !p-0">
-          {/* Desktop Nav */}
-          <ul className="menu hidden lg:flex menu-horizontal">
-            <div className="items flex gap-3 text-base">
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? "text-color-secondary" : ""
-                }
-                to="/"
-              >
-                Home
-              </NavLink>
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? "text-color-secondary" : ""
-                }
-                to="/services"
-              >
-                Services
-              </NavLink>
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? "text-color-secondary" : ""
-                }
-                to="/blogs"
-              >
-                Blogs
-              </NavLink>
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? "text-color-secondary" : ""
-                }
-                to="/about"
-              >
-                About Us
-              </NavLink>
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? "text-color-secondary" : ""
-                }
-                to="/quote"
-              >
-                Get a Quote
-              </NavLink>
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? "text-color-secondary" : ""
-                }
-                to="/contact-us"
-              >
-                Contact Us
-              </NavLink>
+        {/* Start Part End */}
 
-                  {
-                    user ? <button onClick={() => {doLogout()}}>Logout</button> : <NavLink
-                    className={({ isActive }) =>
-                      isActive ? "text-color-secondary" : ""
-                    }
-                    to="/login"
-                  >
-                    Login/Register
-                  </NavLink>
-                  }
+        {/* Nav Middle Section */}
+        {navItems}
+        {/* Nav Middle Section */}
 
-              
-            </div>
-          </ul>
-
-          {/* Mobile Nav */}
-          <div className="dropdown dropdown-end ">
-            <label tabIndex={0} className="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-8 w-8"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+        {/* Navbar End Section */}
+        <div className="flex-none">
+          {/* Mobile Navbar Start */}
+          <div className="dropdown dropdown-end">
+            <div className="lg:hidden">
+              <label tabIndex={0} className="btn btn-ghost btn-circle">
+                <div className="indicator">
+                  <FiMenu className="text-3xl"></FiMenu>
+                </div>
+              </label>
+              <div
+                tabIndex={0}
+                className="mt-3 z-[10] card card-compact dropdown-content w-52 bg-base-100 shadow"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
-            </label>
-            <ul
-              tabIndex={0}
-              className="menu dropdown-content mt-3 z-[12] p-2 shadow bg-base-100 rounded-box w-52"
-            >
-              <div className="items flex flex-col gap-3 px-3">
-                <NavLink
-                  className={({ isActive }) =>
-                    isActive ? "text-color-secondary" : ""
-                  }
-                  to="/"
-                >
-                  Home
-                </NavLink>
-                <NavLink
-                  className={({ isActive }) =>
-                    isActive ? "text-color-secondary" : ""
-                  }
-                  to="/services"
-                >
-                  Services
-                </NavLink>
-                <NavLink
-                  className={({ isActive }) =>
-                    isActive ? "text-color-secondary" : ""
-                  }
-                  to="/blogs"
-                >
-                  Blogs
-                </NavLink>
-                <NavLink
-                  className={({ isActive }) =>
-                    isActive ? "text-color-secondary" : ""
-                  }
-                  to="/about"
-                >
-                  About Us
-                </NavLink>
-                <NavLink
-                  className={({ isActive }) =>
-                    isActive ? "text-color-secondary" : ""
-                  }
-                  to="/quote"
-                >
-                  Get a Quote
-                </NavLink>
-                <NavLink
-                  className={({ isActive }) =>
-                    isActive ? "text-color-secondary" : ""
-                  }
-                  to="/contact-us"
-                >
-                  Contact Us
-                </NavLink>
-                <NavLink
-                  className={({ isActive }) =>
-                    isActive ? "text-color-secondary" : ""
-                  }
-                  to="/login"
-                >
-                  Login/Register
-                </NavLink>
+                <div className="card-body">{navItemsMobile}</div>
               </div>
-            </ul>
+            </div>
           </div>
+          {/* Mobile Navbar End */}
+
+          {/* User Logo With Icons */}
+          <div className="dropdown dropdown-end">
+            {user ? (
+              <div>
+                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                  <div className="w-10 rounded-full">
+                    <img src={`${userInfo?.photoURL}`} />
+                  </div>
+                </label>
+                <ul
+                  tabIndex={0}
+                  className="menu dropdown-content mt-3 z-[10] p-2 shadow bg-base-100 rounded-box w-52"
+                >
+                  <div className="text-center">User Info</div>
+                  <li>{user && <a>{userInfo?.displayName}</a>}</li>
+                  <li>{user && <a>{userInfo?.email}</a>}</li>
+                  <li>
+                    <button
+                      onClick={() => {
+                        doLogout();
+                      }}
+                    >
+                      Logout
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            ) : (
+              <NavLink
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-color-secondary btn btn-ghost btn-circle"
+                    : "btn btn-ghost btn-circle"
+                }
+                to="/login"
+              >
+                <ImUserPlus className="text-3xl"></ImUserPlus>
+              </NavLink>
+            )}
+          </div>
+          {/* User Logo With Icons */}
         </div>
+        {/* Navbar End Section */}
       </div>
     </div>
   );

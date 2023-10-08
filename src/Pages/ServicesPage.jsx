@@ -5,7 +5,7 @@ import ServiceContainer from "../Components/ServiceSection/ServiceContainer"
 const ServicesPage = () => {
 
   return (
-    <div>
+    <div className="p-[5%]">
       <ServiceContainer></ServiceContainer>
     </div>
   )

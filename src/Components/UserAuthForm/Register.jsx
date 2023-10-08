@@ -5,11 +5,13 @@ import { useNavigate } from "react-router-dom";
 
 const Register = ({ handleClick }) => {
 const [errorMessage, setErrorMessage] = useState("")
-const {createUser, googleSignIn} = useContext(AuthDataContext)
+const {createUser, googleSignIn, updateTheUser} = useContext(AuthDataContext)
 const navigator = useNavigate()
 
   const handleSubmit = (event) =>{
     event.preventDefault()
+    let userImage = event.target.userImage.value;
+    let userName = event.target.userName.value;
     let userEmail = event.target.userEmail.value;
     let userPass = event.target.userPassword.value;
 
@@ -24,7 +26,13 @@ const navigator = useNavigate()
 
     createUser(userEmail, userPass)
     .then(() => {
+      updateTheUser(userName, userImage)
+      .then(()=>{
+        console.log("user Updated!")
+      })
+      console.log("user Created!")
       navigator("/")
+      
       })
     .catch(error => setErrorMessage(error.code))
 
@@ -33,6 +41,7 @@ const navigator = useNavigate()
 const logWithGoogle =() => {
   googleSignIn()
   .then(() => {
+    console.log("user Created!")
     navigator("/")
   })
 }
@@ -41,6 +50,20 @@ const logWithGoogle =() => {
   return (
     <div className="reg-container flex justify-center flex-col items-center">
       <form onSubmit={handleSubmit} className="mt-10 mb-2 space-y-3 flex flex-col justify-center">
+        <input
+          name="userName"
+          type="text"
+          
+          placeholder="Type Your Name..."
+          className="input input-bordered input-warning w-full max-w-xs"
+        />
+        <input
+          name="userImage"
+          type="text"
+          
+          placeholder="Enter Image Url.."
+          className="input input-bordered input-warning w-full max-w-xs"
+        />
         <input
           name="userEmail"
           type="email"

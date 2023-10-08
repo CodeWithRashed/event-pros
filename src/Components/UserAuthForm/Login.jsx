@@ -62,7 +62,7 @@ const Login = ({ handleClick }) => {
       <div className="google w-full mb-8 space-y-1">
         <p>OR <br />Login with Google</p>
       <button onClick={() => {
-        googleSignIn().then(() => navigator("/").catch(() => setErrorMessage("Login Error Try Again")))
+        googleSignIn().then(() => navigator("/"))
       }}
             className="cta w-[150px] border-2 border-color-secondary p-2 rounded-lg "
         >
