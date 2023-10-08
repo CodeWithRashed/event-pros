@@ -3,7 +3,7 @@ import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_apiKey,
-  authDomain: import.meta.env.VITE_apiKey,
+  authDomain: "event-pros.firebaseapp.com",
   projectId: import.meta.env.VITE_apiKey,
   storageBucket: import.meta.env.VITE_apiKey,
   messagingSenderId: import.meta.env.VITE_apiKey,

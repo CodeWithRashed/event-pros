@@ -9,6 +9,7 @@ import ContactUsPage from "../Pages/ContactUsPage";
 import UserAuthFormPage from "../Pages/UserAuthFormPage";
 import Page404 from "../Pages/Page404";
 import SingleServicePage from "../Pages/SingleServicePage";
+import PrivateRoute from "./PrivateRoute";
 
 const Routes = createBrowserRouter([
   {
@@ -18,7 +19,7 @@ const Routes = createBrowserRouter([
     children: [
       { path: "/", element: <HomePage></HomePage> },
       { path: "/services", element: <ServicesPage></ServicesPage> },
-      { path: "/services/:id", element: <SingleServicePage></SingleServicePage> },
+      { path: "/services/:id", element: <PrivateRoute><SingleServicePage></SingleServicePage></PrivateRoute> },
       { path: "/blogs", element: <BLogsPage></BLogsPage> },
       { path: "/about", element: <AboutUsPage></AboutUsPage> },
       { path: "/quote", element: <GetQuotePage></GetQuotePage> },

@@ -1,18 +1,22 @@
 import { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { AuthDataContext } from "../../ContextApi/DataContext";
 
 const Login = ({ handleClick }) => {
   const { userSignIn, googleSignIn } = useContext(AuthDataContext);
   const [errorMessage, setErrorMessage] = useState("")
+  const navigator = useNavigate()
 
   const handleSubmit = (event) => {
     event.preventDefault();
     let userEmail = event.target.userEmail.value;
     let userPass = event.target.userPassword.value;
     userSignIn(userEmail, userPass)
-      .then((user) => console.log(user))
+      .then(() => {
+        navigator("/")
+      })
       .catch((error) => setErrorMessage(error.code));
-    console.log("email", userEmail, "and", "pass", userPass, userSignIn);
+   
   };
 
   return (
@@ -58,7 +62,7 @@ const Login = ({ handleClick }) => {
       <div className="google w-full mb-8 space-y-1">
         <p>OR <br />Login with Google</p>
       <button onClick={() => {
-        googleSignIn().then(user =>console.log(user).catch(error => console.log(error.message)))
+        googleSignIn().then(() => navigator("/").catch(() => setErrorMessage("Login Error Try Again")))
       }}
             className="cta w-[150px] border-2 border-color-secondary p-2 rounded-lg "
         >

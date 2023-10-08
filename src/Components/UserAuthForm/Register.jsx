@@ -1,10 +1,12 @@
 import { useContext, useState } from "react";
 import { AuthDataContext } from "../../ContextApi/DataContext";
+import { useNavigate } from "react-router-dom";
+
 
 const Register = ({ handleClick }) => {
 const [errorMessage, setErrorMessage] = useState("")
 const {createUser, googleSignIn} = useContext(AuthDataContext)
-
+const navigator = useNavigate()
 
   const handleSubmit = (event) =>{
     event.preventDefault()
@@ -21,11 +23,19 @@ const {createUser, googleSignIn} = useContext(AuthDataContext)
 
 
     createUser(userEmail, userPass)
-    .then(user => console.log(user))
+    .then(() => {
+      navigator("/")
+      })
     .catch(error => setErrorMessage(error.code))
 
-    console.log("email", userEmail ,"and", "pass", userPass, createUser)
   }
+
+const logWithGoogle =() => {
+  googleSignIn()
+  .then(() => {
+    navigator("/")
+  })
+}
 
 
   return (
@@ -69,9 +79,9 @@ const {createUser, googleSignIn} = useContext(AuthDataContext)
       <div className="google w-full mb-8 space-y-1">
         <p>OR <br />Continue with Google</p>
       <button onClick={() => {
-        googleSignIn().then(user =>console.log(user).catch(error => console.log(error.message)))
+        logWithGoogle()
       }}
-            className="cta w-[150px] border-2 border-color-secondary p-2 rounded-lg "
+            className="cta w-[150px] border-2 border-color-primary p-2 rounded-lg "
         >
           Google
         </button>
