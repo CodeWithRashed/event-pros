@@ -22,7 +22,7 @@ const [user, setUser] = useState(false)
 
 
   const logoutUser = () => {
-    signOut(auth)
+    return signOut(auth)
   }
 
 

@@ -7,8 +7,8 @@ const Navbar = () => {
   const {user, logoutUser} = useContext(AuthDataContext)
 const doLogout = () =>{
   logoutUser()
-  .then((user) => {
-    console.log(`${user} Sign-out successful.`);
+  .then(() => {
+    console.log( "Sign-out successful.");
   })
   .catch((error) => {
     console.log(error);

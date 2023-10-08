@@ -1,0 +1,53 @@
+{
+    "blogPosts": [
+      {
+        "id": 1,
+        "title": "10 Essential Tips for Planning Your Dream Wedding",
+        "author": "Emily Johnson",
+        "image": "https://partymaker.ancorathemes.com/wp-content/uploads/2017/10/service-2-1170x658.jpg",
+        "date": "03/15",
+        "content": "Planning a wedding can be overwhelming, but with these 10 essential tips, you can make your dream wedding a reality. From choosing the perfect venue to creating a stunning floral arrangement, we've got you covered."
+      },
+      {
+        "id": 2,
+        "title": "Fun and Creative Ideas for a Memorable Kids' Birthday Party",
+        "author": "Sarah Davis",
+        "image": "https://partymaker.ancorathemes.com/wp-content/uploads/2017/10/service-8-1170x658.jpg",
+        "date": "04/02",
+        "content": "Looking to host a memorable kids' birthday party? Explore these fun and creative ideas, from themed decorations to exciting games, that will make your child's special day unforgettable."
+      },
+      {
+        "id": 3,
+        "title": "Romantic Anniversary Dinner Ideas for Two",
+        "author": "John Anderson",
+        "image": "https://thekitchencommunity.org/wp-content/uploads/2021/09/shutterstock_1010722123-romantic.jpg",
+        "date": "05/20",
+        "content": "Celebrate your love with a romantic anniversary dinner for two. Discover enchanting ideas for creating a magical evening at home, complete with gourmet cuisine and a cozy atmosphere."
+      },
+      {
+        "id": 4,
+        "title": "Engagement Party Planning: Tips for a Stylish Event",
+        "author": "Lisa Roberts",
+        "image": "https://partymaker.ancorathemes.com/wp-content/uploads/2017/10/service-3-1170x658.jpg",
+        "date": "06/10",
+        "content": "Planning an engagement party? Ensure it's a stylish and memorable event with these expert tips. From elegant decorations to delectable catering options, your celebration will be a hit."
+      },
+      {
+        "id": 5,
+        "title": "Retirement Party Ideas: Celebrate a Lifetime of Achievements",
+        "author": "Michael Smith",
+        "image": "https://partytimerental.com/wp-content/uploads/2019/02/19-03-12-Retirement-Party.jpg",
+        "date": "07/05",
+        "content": "Retirement is a significant milestone. Explore creative retirement party ideas to celebrate a lifetime of achievements. From meaningful decorations to entertainment options, we have you covered."
+      },
+      {
+        "id": 6,
+        "title": "Baby Shower Planning: Creating a Joyful Celebration",
+        "image": "https://www.baby-chick.com/wp-content/uploads/2022/09/Shot-of-a-pregnant-mother-to-be-receiving-gifts-from-her-friends-at-her-baby-shower-1330911140_2134x1408-1024x676.jpeg",
+        "author": "Jessica Turner",
+        "date": "08/12",
+        "content": "Expecting a new addition to the family? Learn how to plan a joyful baby shower that celebrates this special moment. From adorable decorations to baby-themed games, we'll help you create lasting memories."
+      }
+    ]
+  }
+  

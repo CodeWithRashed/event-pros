@@ -39,7 +39,7 @@ const SingleServicePage = () => {
           <div className="package-card-container grid grid-cols-3 gap-3 px-8 ">
             {filteredData[0]?.packages.map((singlePackage, index) => (
               <div className="cards" key={index}>
-                <div className="card pt-6 text-center border-2 border-color-secondary bg-[#FFF] ">
+                <div className="card pt-6 text-center border-2 border-color-primary/[.40] bg-[#FFF] ">
                   <div className="card-header shadow-lg py-5">
                     <h1 className="text-2xl font-bold">{singlePackage.name}</h1>
                     <div className="flex justify-center items-center font-bold text-color-sub">
