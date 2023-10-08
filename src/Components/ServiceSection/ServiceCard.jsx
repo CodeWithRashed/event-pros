@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import { SubButton } from "../Buttons/Buttons";
 
 const ServiceCard = ({ service }) => {
-  const {id, name, image, price, short_description } = service;
+  const {id, name, image, short_description, } = service;
+
 
   return (
     <div className="bg-[#fff] max-h-full p-1 rounded-lg hover:shadow-md hover:scale-[103%] transition-all ease-in-out">
@@ -19,7 +20,7 @@ const ServiceCard = ({ service }) => {
         <div className="flex justify-center">
           <h2 className="translate-y-1">Starting From: </h2>
           <span className="text-color-secondary font-bold text-3xl"> 
-            { price}
+            {service?.packages[0].price}
           </span>
         </div>
 

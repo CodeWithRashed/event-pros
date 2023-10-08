@@ -3,51 +3,182 @@
     {
       "id": 1,
       "name": "Wedding Planning",
-      "image": "https://partymaker.ancorathemes.com/wp-content/uploads/2017/10/service-2-1170x658.jpg",
-      "price": "$1000",
       "short_description": "Comprehensive wedding planning service.",
-      "paragraph": "Our wedding planning service offers comprehensive assistance to make your special day unforgettable. From selecting the perfect venue to coordinating catering and decorations, we handle every detail with precision and care, ensuring your wedding is a seamless and magical experience."
+      "paragraph": "Our wedding planning service offers comprehensive assistance to make your special day unforgettable. From selecting the perfect venue to coordinating catering and decorations, we handle every detail with precision and care, ensuring your wedding is a seamless and magical experience.",
+      "image": "https://partymaker.ancorathemes.com/wp-content/uploads/2017/10/service-2-1170x658.jpg",
+      "packages": [
+        {
+          "name": "Elegance Celebration",
+          "price": "$1000",
+          "duration": "4 Hours",
+          "capacity": "Up to 10 Persons",
+          "services_included": ["Decoration", "Catering"]
+        },
+        {
+          "name": "Kids Haven",
+          "price": "$800",
+          "duration": "3 Hours",
+          "capacity": "Up to 15 Children",
+          "services_included": ["Kids Entertainment", "Decorations"]
+        },
+        {
+          "name": "Outdoor Adventure",
+          "price": "$1200",
+          "duration": "6 Hours",
+          "capacity": "Up to 8 Persons",
+          "services_included": ["Adventure Activities", "Catering"]
+        }
+      ]
     },
     {
       "id": 2,
       "name": "Birthday Party",
-      "image": "https://partymaker.ancorathemes.com/wp-content/uploads/2017/10/service-8-1170x658.jpg",
-      "price": "$250",
       "short_description": "Fun and exciting birthday party!",
-      "paragraph": "Get ready for a fun-filled birthday celebration with our entertainment service. We provide exciting games, music, and activities that guarantee a memorable party for you and your guests. Let us bring the joy and excitement to your special day."
+      "paragraph": "Get ready for a fun-filled birthday celebration with our entertainment service. We provide exciting games, music, and activities that guarantee a memorable party for you and your guests. Let us bring the joy and excitement to your special day.",
+      "image": "https://partymaker.ancorathemes.com/wp-content/uploads/2017/10/service-8-1170x658.jpg",
+      "packages": [
+        {
+          "name": "Elegance Celebration",
+          "price": "$250",
+          "duration": "4 Hours",
+          "capacity": "Up to 10 Persons",
+          "services_included": ["Decoration", "Catering"]
+        },
+        {
+          "name": "Kids Haven",
+          "price": "$200",
+          "duration": "3 Hours",
+          "capacity": "Up to 15 Children",
+          "services_included": ["Kids Entertainment", "Decorations"]
+        },
+        {
+          "name": "Outdoor Adventure",
+          "price": "$300",
+          "duration": "5 Hours",
+          "capacity": "Up to 8 Persons",
+          "services_included": ["Adventure Activities", "Catering"]
+        }
+      ]
     },
     {
       "id": 3,
       "name": "Anniversary Dinner",
-      "image": "https://thekitchencommunity.org/wp-content/uploads/2021/09/shutterstock_1010722123-romantic.jpg",
-      "price": "$150",
       "short_description": "Romantic anniversary dinner for two.",
-      "paragraph": "Celebrate your love with a romantic anniversary dinner for two. Our service sets the stage for an intimate evening at a top-notch restaurant, where you can savor delicious cuisine and create cherished memories with your significant other."
+      "paragraph": "Celebrate your love with a romantic anniversary dinner for two. Our service sets the stage for an intimate evening at a top-notch restaurant, where you can savor delicious cuisine and create cherished memories with your significant other.",
+      "image": "https://thekitchencommunity.org/wp-content/uploads/2021/09/shutterstock_1010722123-romantic.jpg",
+      "packages": [
+        {
+          "name": "Romantic Dinner for Two",
+          "price": "$150",
+          "duration": "2 Hours",
+          "capacity": "2 Persons",
+          "services_included": ["Dinner Setting", "Gourmet Cuisine"]
+        },
+        {
+          "name": "Classic Anniversary",
+          "price": "$200",
+          "duration": "3 Hours",
+          "capacity": "Up to 6 Guests",
+          "services_included": ["Romantic Decorations", "Special Menu"]
+        },
+        {
+          "name": "Anniversary Extravaganza",
+          "price": "$350",
+          "duration": "4 Hours",
+          "capacity": "Up to 10 Guests",
+          "services_included": "Grand Decorations, Live Music, Fine Dining"
+        }
+      ]
     },
     {
       "id": 4,
       "name": "Engagement Party",
-      "image": "https://partymaker.ancorathemes.com/wp-content/uploads/2017/10/service-3-1170x658.jpg",
-      "price": "$300",
       "short_description": "Elegant decorations for your engagement.",
-      "paragraph": "Make your engagement party truly special with our elegant decorations. We transform your venue into a beautiful and enchanting space, adding a touch of sophistication to your celebration. Let us enhance the ambiance of your engagement party."
+      "paragraph": "Make your engagement party truly special with our elegant decorations. We transform your venue into a beautiful and enchanting space, adding a touch of sophistication to your celebration. Let us enhance the ambiance of your engagement party.",
+      "image": "https://partymaker.ancorathemes.com/wp-content/uploads/2017/10/service-3-1170x658.jpg",
+      "packages": [
+        {
+          "name": "Elegant Engagement",
+          "price": "$300",
+          "duration": "3 Hours",
+          "capacity": "Up to 20 Guests",
+          "services_included": ["Elegant Decorations", "Catering"]
+        },
+        {
+          "name": "Chic Celebration",
+          "price": "$250",
+          "duration": "3 Hours",
+          "capacity": "Up to 15 Guests",
+          "services_included": ["Stylish Decorations", "Food and Drinks"]
+        },
+        {
+          "name": "Engagement Bliss",
+          "price": "$400",
+          "duration": "4 Hours",
+          "capacity": "Up to 25 Guests",
+          "services_included": ["Luxury Decorations", "Entertainment, Fine Dining"]
+        }
+      ]
     },
     {
       "id": 5,
       "name": "Retirement Celebration",
-      "image": "https://partytimerental.com/wp-content/uploads/2019/02/19-03-12-Retirement-Party.jpg",
-      "price": "$500",
       "short_description": "Retirement party planning service.",
-      "paragraph": "After a long and successful career, it's time to retire in style. Our retirement party planning service ensures your retirement celebration is a reflection of your achievements. We take care of all the details, so you can enjoy this momentous occasion with friends and family."
+      "paragraph": "After a long and successful career, it's time to retire in style. Our retirement party planning service ensures your retirement celebration is a reflection of your achievements. We take care of all the details, so you can enjoy this momentous occasion with friends and family.",
+      "image": "https://partytimerental.com/wp-content/uploads/2019/02/19-03-12-Retirement-Party.jpg",
+      "packages": [
+        {
+          "name": "Retirement Extravaganza",
+          "price": "$500",
+          "duration": "5 Hours",
+          "capacity": "Up to 50 Guests",
+          "services_included": ["Decorations", "Catering", "Entertainment"]
+        },
+        {
+          "name": "Classic Retirement",
+          "price": "$350",
+          "duration": "4 Hours",
+          "capacity": "Up to 40 Guests",
+          "services_included": ["Elegant Decorations", "Food and Drinks"]
+        },
+        {
+          "name": "Retirement Fun Day",
+          "price": "$600",
+          "duration": "6 Hours",
+          "capacity": "Up to 60 Guests",
+          "services_included": ["Fun Activities", "BBQ Catering"]
+        }
+      ]
     },
     {
       "id": 6,
-      "name": "Baby Shower Coordination",
-      "image": "https://www.baby-chick.com/wp-content/uploads/2022/09/Shot-of-a-pregnant-mother-to-be-receiving-gifts-from-her-friends-at-her-baby-shower-1330911140_2134x1408-1024x676.jpeg",
-      "price": "$200",
+      "name": "Shower Coordination",
       "short_description": "Coordinate a joyful baby shower.",
-      "paragraph": "Expecting a new addition to the family? Leave the planning to us! Our baby shower coordination service ensures a joyful and stress-free event for parents-to-be. We handle the logistics, so you can focus on celebrating the upcoming arrival of your little one."
-      
+      "paragraph": "Expecting a new addition to the family? Leave the planning to us! Our baby shower coordination service ensures a joyful and stress-free event for parents-to-be. We handle the logistics, so you can focus on celebrating the upcoming arrival of your little one.",
+      "image": "https://www.baby-chick.com/wp-content/uploads/2022/09/Shot-of-a-pregnant-mother-to-be-receiving-gifts-from-her-friends-at-her-baby-shower-1330911140_2134x1408-1024x676.jpeg",
+      "packages": [
+        {
+          "name": "Joyful Baby Shower",
+          "price": "$200",
+          "duration": "3 Hours",
+          "capacity": "Up to 20 Guests",
+          "services_included": ["Shower Decorations", "Games", "Catering"]
+        },
+        {
+          "name": "Sweet Expectations",
+          "price": "$150",
+          "duration": "2 Hours",
+          "capacity": "Up to 15 Guests",
+          "services_included": ["Cute Decorations", "Dessert Bar"]
+        },
+        {
+          "name": "Baby Bump Bash",
+          "price": "$250",
+          "duration": "4 Hours",
+          "capacity": "Up to 25 Guests",
+          "services_included": ["Themed Decorations", "Entertainment", "Snacks"]
+        }
+      ]
     }
   ]
 }
