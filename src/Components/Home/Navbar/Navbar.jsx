@@ -6,7 +6,7 @@ import { FiMenu } from "react-icons/fi";
 import { ImUserPlus } from "react-icons/im";
 
 const Navbar = () => {
-  const { user, userInfo, logoutUser } = useContext(AuthDataContext);
+  const { user, userInfo, logoutUser, photo } = useContext(AuthDataContext);
   console.log("navuser", userInfo);
   const navItems = (
     <div className="lg:flex gap-2 items-center mr-3 hidden font-bold">
@@ -22,6 +22,14 @@ const Navbar = () => {
       >
         Services
       </NavLink>
+      {user && (
+        <NavLink
+          className={({ isActive }) => (isActive ? "text-color-secondary" : "")}
+          to="/portfolios"
+        >
+          Portfolio
+        </NavLink>
+      )}
       <NavLink
         className={({ isActive }) => (isActive ? "text-color-secondary" : "")}
         to="/blogs"
@@ -34,12 +42,14 @@ const Navbar = () => {
       >
         About Us
       </NavLink>
-      <NavLink
-        className={({ isActive }) => (isActive ? "text-color-secondary" : "")}
-        to="/quote"
-      >
-        Get a Quote
-      </NavLink>
+      {user && (
+        <NavLink
+          className={({ isActive }) => (isActive ? "text-color-secondary" : "")}
+          to="/quote"
+        >
+          Get a Quote
+        </NavLink>
+      )}
       <NavLink
         className={({ isActive }) => (isActive ? "text-color-secondary" : "")}
         to="/contact-us"
@@ -51,7 +61,7 @@ const Navbar = () => {
 
   const navItemsMobile = (
     <div className="flex flex-col gap-2 items-center font-bold">
-      <NavLink
+    <NavLink
         className={({ isActive }) => (isActive ? "text-color-secondary" : "")}
         to="/"
       >
@@ -63,6 +73,14 @@ const Navbar = () => {
       >
         Services
       </NavLink>
+      {user && (
+        <NavLink
+          className={({ isActive }) => (isActive ? "text-color-secondary" : "")}
+          to="/portfolios"
+        >
+          Portfolio
+        </NavLink>
+      )}
       <NavLink
         className={({ isActive }) => (isActive ? "text-color-secondary" : "")}
         to="/blogs"
@@ -75,12 +93,14 @@ const Navbar = () => {
       >
         About Us
       </NavLink>
-      <NavLink
-        className={({ isActive }) => (isActive ? "text-color-secondary" : "")}
-        to="/quote"
-      >
-        Get a Quote
-      </NavLink>
+      {user && (
+        <NavLink
+          className={({ isActive }) => (isActive ? "text-color-secondary" : "")}
+          to="/quote"
+        >
+          Get a Quote
+        </NavLink>
+      )}
       <NavLink
         className={({ isActive }) => (isActive ? "text-color-secondary" : "")}
         to="/contact-us"
@@ -140,7 +160,7 @@ const Navbar = () => {
               <div>
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                   <div className="w-10 rounded-full">
-                    <img src={`${userInfo?.photoURL}`} />
+                    <img src={`${userInfo?.photoURL || photo}`} />
                   </div>
                 </label>
                 <ul

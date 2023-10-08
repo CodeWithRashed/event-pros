@@ -1,7 +1,6 @@
-import { Link } from "react-router-dom";
-import { MainButton } from "../Buttons/Buttons";
 
-const Portfolios = () => {
+
+const Portfolios = ({exploreButton}) => {
   return (
     <div className="grid grid-cols-4 gap-2">
       <div className="col-span-2  overflow-hidden">
@@ -41,9 +40,7 @@ const Portfolios = () => {
       </div>
       <div className="col-span-2  overflow-hidden relative group">
         <div className="absolute z-10 flex justify-center items-center w-full h-full">
-          <Link to="/portfolios">
-            <MainButton buttonText="Explore More"></MainButton>
-          </Link>
+       {exploreButton}
         </div>
         <img
           className="object-cover h-full w-full group-hover:scale-105 transition-all ease-in-out"

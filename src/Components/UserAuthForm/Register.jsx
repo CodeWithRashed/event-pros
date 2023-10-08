@@ -2,77 +2,75 @@ import { useContext, useState } from "react";
 import { AuthDataContext } from "../../ContextApi/DataContext";
 import { useNavigate } from "react-router-dom";
 
-
 const Register = ({ handleClick }) => {
-const [errorMessage, setErrorMessage] = useState("")
-const {createUser, googleSignIn, updateTheUser} = useContext(AuthDataContext)
-const navigator = useNavigate()
+  const [errorMessage, setErrorMessage] = useState("");
+  const { createUser, googleSignIn, updateTheUser, setPhoto } =
+    useContext(AuthDataContext);
+  const navigator = useNavigate();
 
-  const handleSubmit = (event) =>{
-    event.preventDefault()
+  const handleSubmit = (event) => {
+    event.preventDefault();
     let userImage = event.target.userImage.value;
     let userName = event.target.userName.value;
     let userEmail = event.target.userEmail.value;
     let userPass = event.target.userPassword.value;
 
-    const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@#$%^&+=!])(?=.*[a-zA-Z\d@#$%^&+=!]).{8,}$/;
-    const isValidPass = passwordRegex.test(userPass)
+    const passwordRegex =
+      /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@#$%^&+=!])(?=.*[a-zA-Z\d@#$%^&+=!]).{8,}$/;
+    const isValidPass = passwordRegex.test(userPass);
 
-    if(!isValidPass){
-      setErrorMessage("Password must contain a uppercase letter (s), one lowercase letter (s), one number (0), and one special character (@), and it is 8 characters long")
-    return
+    if (!isValidPass) {
+      setErrorMessage(
+        "Password must contain a uppercase letter (s), one lowercase letter (s), one number (0), and one special character (@), and it is 8 characters long"
+      );
+      return;
     }
 
-
     createUser(userEmail, userPass)
-    .then(() => {
-      updateTheUser(userName, userImage)
-      .then(()=>{
-        console.log("user Updated!")
+      .then(() => {
+        updateTheUser(userName, userImage).then(() => {
+          console.log("user Updated!");
+          setPhoto(userImage)
+        });
+        console.log("user Created!");
+        navigator("/");
       })
-      console.log("user Created!")
-      navigator("/")
-      
-      })
-    .catch(error => setErrorMessage(error.code))
+      .catch((error) => setErrorMessage(error.code));
+  };
 
-  }
-
-const logWithGoogle =() => {
-  googleSignIn()
-  .then(() => {
-    console.log("user Created!")
-    navigator("/")
-  })
-}
-
+  const logWithGoogle = () => {
+    googleSignIn().then(() => {
+      console.log("user Created!");
+      navigator("/");
+    });
+  };
 
   return (
     <div className="reg-container flex justify-center flex-col items-center">
-      <form onSubmit={handleSubmit} className="mt-10 mb-2 space-y-3 flex flex-col justify-center">
+      <form
+        onSubmit={handleSubmit}
+        className="mt-10 mb-2 space-y-3 flex flex-col justify-center"
+      >
         <input
           name="userName"
           type="text"
-          
           placeholder="Type Your Name..."
           className="input input-bordered input-warning w-full max-w-xs"
         />
         <input
           name="userImage"
           type="text"
-          
           placeholder="Enter Image Url.."
           className="input input-bordered input-warning w-full max-w-xs"
         />
         <input
           name="userEmail"
           type="email"
-          
           placeholder="Type Your Email..."
           className="input input-bordered input-warning w-full max-w-xs"
         />
         <input
-         name="userPassword"
+          name="userPassword"
           type="password"
           placeholder="Your Password..."
           className="input input-bordered input-warning w-full max-w-xs"
@@ -85,11 +83,17 @@ const logWithGoogle =() => {
         </button>
       </form>
       <div className="error text-error px-12">
-        { errorMessage && <p>{errorMessage == "auth/email-already-in-use" ? " Email Already Used!" : errorMessage}</p>}
+        {errorMessage && (
+          <p>
+            {errorMessage == "auth/email-already-in-use"
+              ? " Email Already Used!"
+              : errorMessage}
+          </p>
+        )}
       </div>
       <p className="text-center">
-        Already have an account? 
-        <button 
+        Already have an account?
+        <button
           className="text-[#0000FF] ms-2 pb-1"
           onClick={() => {
             handleClick("login");
@@ -100,11 +104,15 @@ const logWithGoogle =() => {
       </p>
 
       <div className="google w-full mb-8 space-y-1">
-        <p>OR <br />Continue with Google</p>
-      <button onClick={() => {
-        logWithGoogle()
-      }}
-            className="cta w-[150px] border-2 border-color-primary p-2 rounded-lg "
+        <p>
+          OR <br />
+          Continue with Google
+        </p>
+        <button
+          onClick={() => {
+            logWithGoogle();
+          }}
+          className="cta w-[150px] border-2 border-color-primary p-2 rounded-lg "
         >
           Google
         </button>

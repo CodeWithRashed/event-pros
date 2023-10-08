@@ -12,9 +12,10 @@ import {
 export const AuthDataContext = createContext(null);
 const provider = new GoogleAuthProvider();
 const DataContext = ({ children }) => {
-  const [user, setUser] = useState(false);
-  const [userInfo, setUserInfo] = useState(null)
+  const [user, setUser] = useState(null);
+  const [userInfo, setUserInfo] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [photo, setPhoto] = useState("");
 
   const createUser = (userEmail, userPass) => {
     setLoading(true);
@@ -46,12 +47,12 @@ const DataContext = ({ children }) => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(true);
-        console.log("theuser", user)
-        setUserInfo(user)
+        setUserInfo(user);
         setLoading(false);
       } else {
         setUser(false);
       }
+      setLoading(false);
     });
   }, []);
 
@@ -63,7 +64,9 @@ const DataContext = ({ children }) => {
     googleSignIn,
     loading,
     updateTheUser,
-    userInfo
+    userInfo,
+    photo,
+    setPhoto,
   };
 
   return (

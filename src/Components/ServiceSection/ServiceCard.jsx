@@ -6,7 +6,7 @@ const ServiceCard = ({ service }) => {
 
 
   return (
-    <div className="bg-[#fff] max-h-full p-1 rounded-lg hover:shadow-md hover:scale-[103%] transition-all ease-in-out">
+    <div className="bg-[#fff] shadow-xl max-h-full p-1 rounded-lg hover:shadow-md hover:scale-[103%] transition-all ease-in-out">
       <div className="image w-84 h-56 overflow-hidden">
         <img
           src={image}
