@@ -1,26 +1,36 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthDataContext } from "../../ContextApi/DataContext";
 
 const Register = ({ handleClick }) => {
-
-const {createUser} = useContext(AuthDataContext)
+const [errorMessage, setErrorMessage] = useState("")
+const {createUser, googleSignIn} = useContext(AuthDataContext)
 
 
   const handleSubmit = (event) =>{
     event.preventDefault()
     let userEmail = event.target.userEmail.value;
     let userPass = event.target.userPassword.value;
+
+    const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@#$%^&+=!])(?=.*[a-zA-Z\d@#$%^&+=!]).{8,}$/;
+    const isValidPass = passwordRegex.test(userPass)
+
+    if(!isValidPass){
+      setErrorMessage("Password must contain a uppercase letter (s), one lowercase letter (s), one number (0), and one special character (@), and it is 8 characters long")
+    return
+    }
+
+
     createUser(userEmail, userPass)
     .then(user => console.log(user))
-    .catch(error => console.log(error.message))
+    .catch(error => setErrorMessage(error.code))
 
     console.log("email", userEmail ,"and", "pass", userPass, createUser)
   }
 
 
   return (
-    <div className="reg-container flex justify-center flex-col">
-      <form onSubmit={handleSubmit} className="m-10 space-y-5 flex flex-col">
+    <div className="reg-container flex justify-center flex-col items-center">
+      <form onSubmit={handleSubmit} className="mt-10 mb-2 space-y-3 flex flex-col justify-center">
         <input
           name="userEmail"
           type="email"
@@ -41,11 +51,13 @@ const {createUser} = useContext(AuthDataContext)
           Register
         </button>
       </form>
-
+      <div className="error text-error px-12">
+        { errorMessage && <p>{errorMessage == "auth/email-already-in-use" ? " Email Already Used!" : errorMessage}</p>}
+      </div>
       <p className="text-center">
         Already have an account? 
         <button 
-          className="text-[#0000FF] ms-2 pb-8"
+          className="text-[#0000FF] ms-2 pb-1"
           onClick={() => {
             handleClick("login");
           }}
@@ -53,6 +65,17 @@ const {createUser} = useContext(AuthDataContext)
           Login Here!
         </button>
       </p>
+
+      <div className="google w-full mb-8 space-y-1">
+        <p>OR <br />Continue with Google</p>
+      <button onClick={() => {
+        googleSignIn().then(user =>console.log(user).catch(error => console.log(error.message)))
+      }}
+            className="cta w-[150px] border-2 border-color-secondary p-2 rounded-lg "
+        >
+          Google
+        </button>
+      </div>
     </div>
   );
 };

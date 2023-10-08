@@ -1,8 +1,9 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthDataContext } from "../../ContextApi/DataContext";
 
 const Login = ({ handleClick }) => {
-  const { userSignIn } = useContext(AuthDataContext);
+  const { userSignIn, googleSignIn } = useContext(AuthDataContext);
+  const [errorMessage, setErrorMessage] = useState("")
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -10,13 +11,13 @@ const Login = ({ handleClick }) => {
     let userPass = event.target.userPassword.value;
     userSignIn(userEmail, userPass)
       .then((user) => console.log(user))
-      .catch((error) => console.log(error.message));
+      .catch((error) => setErrorMessage(error.code));
     console.log("email", userEmail, "and", "pass", userPass, userSignIn);
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit} className="m-10 space-y-5 flex flex-col">
+    <div className="flex justify-center flex-col items-center">
+      <form onSubmit={handleSubmit} className="mt-10 mb-2 space-y-3 flex flex-col">
         <input
           type="email"
           name="userEmail"
@@ -36,10 +37,16 @@ const Login = ({ handleClick }) => {
           Login
         </button>
       </form>
+
+      <div className="error text-error">
+
+        { errorMessage && <p>Wrong Email or Password!</p>}
+      </div>
+
       <p className="text-center">
         New Here?
         <button
-          className="text-[#0000FF] ms-2 pb-8"
+          className="text-[#0000FF] ms-2 pb-1"
           onClick={() => {
             handleClick("register");
           }}
@@ -47,6 +54,17 @@ const Login = ({ handleClick }) => {
           Register Now!
         </button>
       </p>
+
+      <div className="google w-full mb-8 space-y-1">
+        <p>OR <br />Login with Google</p>
+      <button onClick={() => {
+        googleSignIn().then(user =>console.log(user).catch(error => console.log(error.message)))
+      }}
+            className="cta w-[150px] border-2 border-color-secondary p-2 rounded-lg "
+        >
+          Google
+        </button>
+      </div>
     </div>
   );
 };

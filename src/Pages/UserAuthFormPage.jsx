@@ -21,7 +21,7 @@ const UserAuthFormPage = () => {
   }
 
   return (
-    <div className="main my-20 py-[5%]">
+    <div className="main mb-20  py-[5%]">
       <div className="bg-[#FFF] shadow-xl w-[520px] mx-auto">
         <div className="authCtaContainer shadow-lg flex justify-around w-[520px]">
           <div
@@ -63,6 +63,8 @@ const UserAuthFormPage = () => {
             <Register handleClick={handleClick}></Register>
           </div>
         </div>
+
+
       </div>
     </div>
   );
