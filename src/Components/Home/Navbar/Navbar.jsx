@@ -1,7 +1,21 @@
 import { NavLink } from "react-router-dom";
 import Logo from "/logo.png";
+import { useContext } from "react";
+import { AuthDataContext } from "../../../ContextApi/DataContext";
 
 const Navbar = () => {
+  const {user, logoutUser} = useContext(AuthDataContext)
+const doLogout = () =>{
+  logoutUser()
+  .then((user) => {
+    console.log(`${user} Sign-out successful.`);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+}
+
+
   return (
     <div className="px-[5%] pt-[2%]">
       <div className="navbar !m-0 !p-0 font-rubik text-lg font-bold  ">
@@ -62,14 +76,19 @@ const Navbar = () => {
               >
                 Contact Us
               </NavLink>
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? "text-color-secondary" : ""
-                }
-                to="/login"
-              >
-                Login/Register
-              </NavLink>
+
+                  {
+                    user ? <button onClick={() => {doLogout()}}>Logout</button> : <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "text-color-secondary" : ""
+                    }
+                    to="/login"
+                  >
+                    Login/Register
+                  </NavLink>
+                  }
+
+              
             </div>
           </ul>
 
