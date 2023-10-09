@@ -11,15 +11,16 @@ const ContactUsPage = () => {
   return (
     <div>
       <PageHeader title="Contact Us"></PageHeader>
-      <div className="p-[5%]">
+      <div className="p-[5%] mb-10">
         <SectionTitle
           subtitle="You have an event"
           title="We have the solutions"
         ></SectionTitle>
 
-        <div className="contact-section grid grid-cols-2">
-          <div className="info space-y-4">
+        <div className="contact-section gap-10 lg:gap-3 grid lg:grid-cols-2">
+          <div className="info lg:block flex flex-col justify-center items-center text-center lg:text-left space-y-4">
             <h1 className="text-4xl font-bold text-color-secondary">We’ll make your next <br></br> celebration very special!</h1>
+            <div className="info-times space-y-3">
             <div className="flex gap-2 items-center lg:text-xl"> <p className="text-lg bg-color-primary rounded-full inline-block p-2"><ImLocation2 ></ImLocation2></p> 
               <p>8500, Lorem Street, Chicago, IL, 55030</p>
             </div>
@@ -30,6 +31,7 @@ const ContactUsPage = () => {
             <div  className="flex gap-2 items-center lg:text-xl">
             <p className="text-lg bg-color-primary rounded-full inline-block p-2"><BsTelephoneFill ></BsTelephoneFill></p> 
               <h1>(123) 456-78-90</h1>
+            </div>
             </div>
           </div>
           <div className="form">
