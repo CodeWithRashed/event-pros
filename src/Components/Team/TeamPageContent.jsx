@@ -25,14 +25,14 @@ const handleSeeAll = () => {
 
   return (
     <div className="pb-[5%] px-[5%]">
-      <div className="grid grid-cols-4 gap-5">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
         {sliceData.map((teamMember) => (
           <div
             key={teamMember.id}
             className="card rounded-lg overflow-hidden shadow-lg"
           >
             <img
-              className="w-[250px] h-[250px] object-cover"
+              className="h-[280px] object-cover"
               src={teamMember.image}
               alt=""
             />

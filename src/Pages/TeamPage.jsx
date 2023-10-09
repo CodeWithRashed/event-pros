@@ -5,9 +5,9 @@ import SectionTitle from "../Components/Title/SectionTitle"
 
 const TeamPage = () => {
   return (
-    <div>
-     <PageHeader title="Meet The Team" ></PageHeader>
-     <div className="content pt-[5%]"></div>
+    <div className="mb-10">
+     <PageHeader title="The Team" ></PageHeader>
+     <div className="content pt-[5%] "></div>
      <SectionTitle title="Our Expertise" subtitle="Your Event,"></SectionTitle>
      <TeamPageContent></TeamPageContent>
     </div>
