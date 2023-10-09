@@ -13,7 +13,7 @@ const BlogsPage = () => {
   return (
     <div>
       <PageHeader title="Blogs"></PageHeader>
-    <div className="p-[5%] bg-[#fff]">
+    <div className="p-[5%] bg-[#fff] mb-10">
       <SectionTitle
       subtitle="Blog feed"
       title="Our Latest Blog"

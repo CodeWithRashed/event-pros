@@ -6,7 +6,7 @@ const ServicesPage = () => {
   return (
     <div>
       <PageHeader title="Services"></PageHeader>
-      <div className="p-[5%]">
+      <div className="p-[5%] mb-10">
         <SectionTitle
         subtitle="Our services"
         title="What We Offer"
