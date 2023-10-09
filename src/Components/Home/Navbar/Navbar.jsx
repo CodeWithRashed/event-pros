@@ -162,8 +162,8 @@ const Navbar = () => {
                   className="menu dropdown-content mt-3 z-[10] p-2 shadow bg-base-100 rounded-box w-52"
                 >
                   <div className="text-center">User Info</div>
-                  <li>{user && <a>{userInfo?.displayName}</a>}</li>
-                  <li>{user && <a>{userInfo?.email}</a>}</li>
+                  <li>{user && <p>{userInfo?.displayName}</p>}</li>
+                  <li>{user && <p>{userInfo?.email}</p>}</li>
                   <li>
                     <button
                       onClick={() => {

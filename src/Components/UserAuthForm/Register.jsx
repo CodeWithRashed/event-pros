@@ -2,12 +2,13 @@ import { useContext, useState } from "react";
 import { AuthDataContext } from "../../ContextApi/DataContext";
 import { useLocation, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
+import PropTypes from "prop-types";
 
 const Register = ({ handleClick }) => {
   const [errorMessage, setErrorMessage] = useState("");
   const { createUser, googleSignIn, updateTheUser, setPhoto } =
     useContext(AuthDataContext);
-    const location = useLocation()
+  const location = useLocation();
 
   const navigator = useNavigate();
 
@@ -36,7 +37,7 @@ const Register = ({ handleClick }) => {
         });
         toast.success("Account Create Successful, Redirecting..");
         setTimeout(() => {
-          navigator(location.state ? location.state : "/")
+          navigator(location.state ? location.state : "/");
         }, 2000);
       })
       .catch((error) => setErrorMessage(error.code));
@@ -46,7 +47,7 @@ const Register = ({ handleClick }) => {
     googleSignIn().then(() => {
       toast.success("Login Successful, Redirecting..");
       setTimeout(() => {
-        navigator(location.state ? location.state : "/")
+        navigator(location.state ? location.state : "/");
       }, 2000);
     });
   };
@@ -57,28 +58,36 @@ const Register = ({ handleClick }) => {
         onSubmit={handleSubmit}
         className="mt-10 mb-2 space-y-3 flex flex-col justify-center"
       >
+        <label htmlFor="userName"></label>
         <input
           name="userName"
+          id="userName"
           required
           type="text"
           placeholder="Type Your Name..."
           className="input input-bordered input-warning w-full max-w-xs"
         />
+        <label htmlFor="userImage"></label>
         <input
+          id="userImage"
           name="userImage"
           type="text"
           placeholder="Enter Image Url.."
           className="input input-bordered input-warning w-full max-w-xs"
         />
+        <label htmlFor="userEmail"></label>
         <input
           name="userEmail"
+          id="userEmailReg"
           required
           type="email"
           placeholder="Type Your Email..."
           className="input input-bordered input-warning w-full max-w-xs"
         />
+        <label htmlFor="userPassword"></label>
         <input
           name="userPassword"
+          id="userPasswordReg"
           required
           type="password"
           placeholder="Your Password..."
@@ -128,6 +137,10 @@ const Register = ({ handleClick }) => {
       </div>
     </div>
   );
+};
+
+Register.propTypes = {
+  handleClick: PropTypes.func,
 };
 
 export default Register;

@@ -1,5 +1,5 @@
 
-
+import PropTypes from 'prop-types';
 const Portfolios = ({exploreButton}) => {
   return (
     <div className="grid grid-cols-4 gap-2">
@@ -52,11 +52,8 @@ const Portfolios = ({exploreButton}) => {
   );
 };
 
-export default Portfolios;
+Portfolios.propTypes = {
+  exploreButton: PropTypes.node,
 
-// https://partymaker.ancorathemes.com/wp-content/uploads/2017/10/bg-20.jpg?id=455
-//https://partymaker.ancorathemes.com/wp-content/uploads/2017/10/service-1-540x456.jpg
-//https://partymaker.ancorathemes.com/wp-content/uploads/2017/10/gallery-1.jpg
-//https://partymaker.ancorathemes.com/wp-content/uploads/2017/10/gallery-4.jpg
-//https://partymaker.ancorathemes.com/wp-content/uploads/2017/10/gallery-5.jpg
-//https://partymaker.ancorathemes.com/wp-content/uploads/2017/10/gallery-3.jpg
+}
+export default Portfolios;

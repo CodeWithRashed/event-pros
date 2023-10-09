@@ -1,4 +1,3 @@
-import { useContext } from "react"
 import Banner from "../Components/Home/Banner/Banner"
 import ServiceSection from "../Components/ServiceSection/ServiceSection"
 import TeamSection from "../Components/Team/TeamSection"

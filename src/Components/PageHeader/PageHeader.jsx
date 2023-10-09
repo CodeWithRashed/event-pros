@@ -1,4 +1,5 @@
 import FooterBg from "../../assets/footer_bg.jpg";
+import PropTypes from 'prop-types';
 const PageHeader = ({title}) => {
   return (
     <div>
@@ -11,5 +12,7 @@ const PageHeader = ({title}) => {
     </div>
   )
 }
-
+PageHeader.propTypes = {
+  title: PropTypes.string,
+}
 export default PageHeader

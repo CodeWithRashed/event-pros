@@ -16,7 +16,7 @@ const SingleServicePage = () => {
   useEffect(() => {
     fetchData()
       .then((data) => setMainData(data.services))
-      .catch((error) => console.log(error));
+      .catch();
   }, []);
 
   const filteredData = mainData.filter((singleData) => singleData.id == id.id);

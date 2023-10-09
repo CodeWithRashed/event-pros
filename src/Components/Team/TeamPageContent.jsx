@@ -3,25 +3,23 @@ import { fetchTeam } from "../../Hooks/fetchTeam";
 import { SubButton } from "../Buttons/Buttons";
 
 const TeamPageContent = () => {
-const [sliceData, setSliceData] = useState([])
+  const [sliceData, setSliceData] = useState([]);
   const [teamData, setTeamData] = useState([]);
-  const [seeAll, setSeeAll] = useState(true)
+  const [seeAll, setSeeAll] = useState(true);
 
-
-  useEffect(()=>{
+  useEffect(() => {
     fetchTeam()
-    .then((data) => {
-        setTeamData(data.team)
-        setSliceData(data.team.slice(0, 8))
-    })
-    .catch((error) => console.log(error));
-  }, [])
- 
-const handleSeeAll = () => {
-    setSliceData(teamData)
-    setSeeAll(false)
-}
+      .then((data) => {
+        setTeamData(data.team);
+        setSliceData(data.team.slice(0, 8));
+      })
+      .catch();
+  }, []);
 
+  const handleSeeAll = () => {
+    setSliceData(teamData);
+    setSeeAll(false);
+  };
 
   return (
     <div className="pb-[5%] px-[5%]">
@@ -51,12 +49,15 @@ const handleSeeAll = () => {
         ))}
       </div>
       <div className="cta text-center mt-14">
-        {
-            seeAll && <button onClick={()=>{
-                handleSeeAll()
-            }}><SubButton on buttonText="See All"></SubButton></button> 
-        }
-        
+        {seeAll && (
+          <button
+            onClick={() => {
+              handleSeeAll();
+            }}
+          >
+            <SubButton on buttonText="See All"></SubButton>
+          </button>
+        )}
       </div>
     </div>
   );

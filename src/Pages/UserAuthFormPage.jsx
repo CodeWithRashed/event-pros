@@ -7,19 +7,15 @@ const UserAuthFormPage = () => {
   const [toggle, setToggle] = useState(false);
 
   const handleClick = (login) => {
+    if (login == "login") {
+      setToggle(true);
 
-    if(login == "login"){
-      setToggle(true)
-     console.log( "login Clicked")
-      return 
-    }else{
-      console.log( "register clicked")
-      setToggle(false)
-      return
+      return;
+    } else {
+      setToggle(false);
+      return;
     }
-    
-  
-  }
+  };
 
   return (
     <div className="main mb-20  p-[5%]">
@@ -35,7 +31,7 @@ const UserAuthFormPage = () => {
           >
             <button
               onClick={() => {
-                handleClick("login")
+                handleClick("login");
               }}
             >
               Login
@@ -48,7 +44,7 @@ const UserAuthFormPage = () => {
           >
             <button
               onClick={() => {
-                handleClick("register")
+                handleClick("register");
               }}
             >
               Register
@@ -67,8 +63,6 @@ const UserAuthFormPage = () => {
             <Register handleClick={handleClick}></Register>
           </div>
         </div>
-
-
       </div>
     </div>
   );

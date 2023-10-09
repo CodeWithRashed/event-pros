@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { SubButton } from "../Buttons/Buttons";
+import PropTypes from 'prop-types';
 
 const ServiceCard = ({ service }) => {
   const {id, name, image, short_description, } = service;
@@ -32,5 +33,9 @@ const ServiceCard = ({ service }) => {
     </div>
   );
 };
+
+ServiceCard.propTypes = {
+  service: PropTypes.object,
+}
 
 export default ServiceCard;

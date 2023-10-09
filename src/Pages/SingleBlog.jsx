@@ -16,7 +16,7 @@ const SingleBlog = () => {
       setBlog(filterBlog);
     });
   }, [id]);
-  console.log(allBlogs);
+
   return (
     <div className="p-[5%]">
       <Helmet>

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { createContext, useEffect, useState } from "react";
 import { auth } from "../Config/FirebaseConfig";
 import {
@@ -76,4 +77,7 @@ const DataContext = ({ children }) => {
   );
 };
 
+DataContext.propTypes = {
+  children: PropTypes.node
+}
 export default DataContext;

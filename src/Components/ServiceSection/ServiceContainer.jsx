@@ -6,7 +6,7 @@ const ServiceContainer = () => {
     const [data, setData] = useState([]);
     fetchData()
       .then((data) => setData(data.services))
-      .catch((error) => console.log(error));
+      .catch();
   return (
     <div>
       <div className="service-container grid lg:grid-cols-3  gap-5">

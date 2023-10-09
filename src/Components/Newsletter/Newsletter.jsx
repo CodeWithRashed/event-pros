@@ -18,6 +18,9 @@ const Newsletter = () => {
 
           <button
             onClick={() => {
+              if( document.getElementById("newsletter").value == ""){
+               return toast.error("Please Provide an Email!");
+              }
              
               setTimeout(() => {
                 toast.success("Thank you for subscribing to our newsletter!");

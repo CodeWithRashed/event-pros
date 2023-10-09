@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types';
 const SectionTitle = ({title, subtitle}) => {
   return (
     <div className="space-y-3 text-center mb-16">
@@ -6,6 +6,10 @@ const SectionTitle = ({title, subtitle}) => {
       <h2 className="font-bold text-4xl font-rubik text-color-secondary">{title}</h2>
     </div>
   )
+}
+SectionTitle.propTypes ={
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
 }
 
 export default SectionTitle
