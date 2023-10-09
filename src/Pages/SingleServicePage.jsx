@@ -19,13 +19,24 @@ const SingleServicePage = () => {
 
 
   return (
-    <div className="p-[5%] grid grid-cols-4 gap-5">
-      <div className="people-container">
-        <div className="people text-center font-bold mb-5">
-          People Who can help you with your {filteredData[0]?.name}
+    <div className="p-[5%] grid lg:grid-cols-4 gap-5">
+      <div className="people-container order-2 col-span-3 lg:col-span-1 lg:order-1">
+        <div className="people font-bold mb-5">
+          <h1>People Who can help you with your {filteredData[0]?.name}</h1>
+          <div className="m-5 grid justify-center"> 
+          <div className="h-10 w-10"></div>
+          <div className="h-10 w-10"></div>
+          <div className="h-10 w-10"></div>
+          <div className="h-10 w-10"></div>
+          <div className="h-10 w-10"></div>
+          <div className="h-10 w-10"></div>
+          <div className="h-10 w-10"></div>
+          </div>
+          
         </div>
       </div>
-      <div className="text-container col-span-3">
+      {/* Blog Content */}
+      <div className="text-container order-1 lg:order-2 col-span-3">
         <div className="image">
           <img
             className="w-full h-[60vh] object-cover"
@@ -39,7 +50,7 @@ const SingleServicePage = () => {
         subtitle="Here is"
         title="Best Package Available"
       ></SectionTitle>
-          <div className="package-card-container grid grid-cols-3 gap-3 px-8 ">
+          <div className="package-card-container grid lg:grid-cols-3 gap-3 px-8 ">
             {filteredData[0]?.packages.map((singlePackage, index) => (
               <div className="cards" key={index}>
                 <div className="card pt-6 text-center border-2 border-color-primary/[.40] bg-[#FFF] ">

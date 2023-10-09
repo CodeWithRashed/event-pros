@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { AuthDataContext } from "../../../ContextApi/DataContext";
 import { FiMenu } from "react-icons/fi";
 import { ImUserPlus } from "react-icons/im";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
   const { user, userInfo, logoutUser, photo } = useContext(AuthDataContext);
@@ -102,10 +103,13 @@ const Navbar = () => {
   const doLogout = () => {
     logoutUser()
       .then(() => {
-        console.log("Sign-out successful.");
+        setTimeout(() => {
+          toast.success('Logout Successful!')
+        }, 1000);
+       
       })
-      .catch((error) => {
-        console.log(error);
+      .catch(() => {
+       
       });
   };
 

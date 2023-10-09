@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { AuthDataContext } from "../../ContextApi/DataContext";
 import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const Register = ({ handleClick }) => {
   const [errorMessage, setErrorMessage] = useState("");
@@ -29,19 +30,22 @@ const Register = ({ handleClick }) => {
     createUser(userEmail, userPass)
       .then(() => {
         updateTheUser(userName, userImage).then(() => {
-          console.log("user Updated!");
-          setPhoto(userImage)
+          setPhoto(userImage);
         });
-        console.log("user Created!");
-        navigator("/");
+        toast.success("Account Create Successful, Redirecting..");
+        setTimeout(() => {
+          navigator("/")
+        }, 2000);
       })
       .catch((error) => setErrorMessage(error.code));
   };
 
   const logWithGoogle = () => {
     googleSignIn().then(() => {
-      console.log("user Created!");
-      navigator("/");
+      toast.success("Login Successful, Redirecting..");
+      setTimeout(() => {
+        navigator("/")
+      }, 2000);
     });
   };
 
@@ -53,6 +57,7 @@ const Register = ({ handleClick }) => {
       >
         <input
           name="userName"
+          required
           type="text"
           placeholder="Type Your Name..."
           className="input input-bordered input-warning w-full max-w-xs"
@@ -65,19 +70,21 @@ const Register = ({ handleClick }) => {
         />
         <input
           name="userEmail"
+          required
           type="email"
           placeholder="Type Your Email..."
           className="input input-bordered input-warning w-full max-w-xs"
         />
         <input
           name="userPassword"
+          required
           type="password"
           placeholder="Your Password..."
           className="input input-bordered input-warning w-full max-w-xs"
         />
         <button
           type="submit"
-          className="cta max-w-xs border-2 border-color-primary p-2 rounded-lg "
+          className="cta hover:scale-105 transition-all ease-in-out max-w-xs border-2 border-color-primary p-2 rounded-lg "
         >
           Register
         </button>
@@ -94,7 +101,7 @@ const Register = ({ handleClick }) => {
       <p className="text-center">
         Already have an account?
         <button
-          className="text-[#0000FF] ms-2 pb-1"
+          className="text-[#0000FF] ms-2 pb-1 hover:scale-105 transition-all ease-in-out"
           onClick={() => {
             handleClick("login");
           }}
@@ -112,7 +119,7 @@ const Register = ({ handleClick }) => {
           onClick={() => {
             logWithGoogle();
           }}
-          className="cta w-[150px] border-2 border-color-primary p-2 rounded-lg "
+          className="hover:scale-105 transition-all ease-in-out cta w-[150px] border-2 border-color-primary p-2 rounded-lg "
         >
           Google
         </button>
