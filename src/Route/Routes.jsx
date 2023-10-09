@@ -3,7 +3,6 @@ import MainLayout from "../Layout/MainLayout";
 import HomePage from "../Pages/HomePage";
 import ServicesPage from "../Pages/ServicesPage";
 import BLogsPage from "../Pages/BlogsPage";
-import AboutUsPage from "../Pages/AboutUsPage";
 import TeamPage from "../Pages/TeamPage";
 import ContactUsPage from "../Pages/ContactUsPage";
 import UserAuthFormPage from "../Pages/UserAuthFormPage";
@@ -25,7 +24,6 @@ const Routes = createBrowserRouter([
       { path: "/portfolios", element: <PrivateRoute><PortfolioPage></PortfolioPage></PrivateRoute> },
       { path: "/blogs", element: <BLogsPage></BLogsPage> },
       { path: "/blogs/:id", element: <SingleBlog></SingleBlog> },
-      { path: "/about", element: <AboutUsPage></AboutUsPage> },
       { path: "/team", element: <PrivateRoute><TeamPage></TeamPage></PrivateRoute> },
       { path: "/contact-us", element: <ContactUsPage></ContactUsPage> },
       { path: "/login", element: <UserAuthFormPage></UserAuthFormPage> },

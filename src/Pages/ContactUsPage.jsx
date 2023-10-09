@@ -4,12 +4,16 @@ import SectionTitle from "../Components/Title/SectionTitle";
 import { BsCheck2Circle, BsTelephoneFill } from "react-icons/bs";
 import { ImLocation2 } from "react-icons/im";
 import { HiOutlineMail } from "react-icons/hi";
+import { Helmet } from "react-helmet";
 
 
 const ContactUsPage = () => {
   let inputFrom = useRef();
   return (
     <div>
+      <Helmet>
+        <title>EventPros - Contact</title>
+      </Helmet>
       <PageHeader title="Contact Us"></PageHeader>
       <div className="p-[5%] mb-10">
         <SectionTitle

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Login from "../Components/UserAuthForm/Login";
 import Register from "../Components/UserAuthForm/Register";
+import { Helmet } from "react-helmet";
 
 const UserAuthFormPage = () => {
   const [toggle, setToggle] = useState(false);
@@ -22,6 +23,9 @@ const UserAuthFormPage = () => {
 
   return (
     <div className="main mb-20  p-[5%]">
+      <Helmet>
+        <title>EventPros - Login</title>
+      </Helmet>
       <div className="bg-[#FFF] shadow-xl lg:w-[520px] mx-auto">
         <div className="authCtaContainer shadow-lg flex justify-around lg:w-[520px]">
           <div

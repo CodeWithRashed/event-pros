@@ -6,6 +6,7 @@ import {
   BsArrowUpRightCircle,
   BsFillArrowRightCircleFill,
 } from "react-icons/bs";
+import { Helmet } from "react-helmet";
 
 const SingleServicePage = () => {
   const [mainData, setMainData] = useState([]);
@@ -22,6 +23,9 @@ const SingleServicePage = () => {
 
   return (
     <div className="p-[5%] grid lg:grid-cols-4 gap-5">
+      <Helmet>
+        <title>EventPros - Service</title>
+      </Helmet>
       <div className="people-container order-2 col-span-3 lg:col-span-1 lg:order-1">
         <div className="people font-bold mb-5 text-center">
              {/* Other Services */}

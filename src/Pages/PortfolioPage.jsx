@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import PageHeader from "../Components/PageHeader/PageHeader";
 import Portfolios from "../Components/PortfolioSection/Portfolios";
 import UpcomingProjects from "../Components/PortfolioSection/UpcomingProjects";
@@ -6,7 +7,11 @@ import SectionTitle from "../Components/Title/SectionTitle";
 const PortfolioPage = () => {
   return (
     <div>
+      <Helmet>
+        <title>EventPros - Portfolio</title>
+      </Helmet>
       <PageHeader title="Portfolio"></PageHeader>
+
       <div className="p-[5%]">
         <div className="pb-[8%]">
           <SectionTitle

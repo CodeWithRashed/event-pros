@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { fetchBlog } from "../Hooks/fetchBlogs";
 import {BiSearchAlt2} from 'react-icons/bi'
+import { Helmet } from "react-helmet";
 
 const SingleBlog = () => {
   const id = useParams();
@@ -18,6 +19,9 @@ const SingleBlog = () => {
   console.log(allBlogs);
   return (
     <div className="p-[5%]">
+      <Helmet>
+        <title>EventPros - Blog</title>
+      </Helmet>
       <div className="blog-container grid lg:grid-cols-3 gap-8">
        
         <div className="blog-post lg:order-2 col-span-2 ">
