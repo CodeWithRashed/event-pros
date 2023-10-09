@@ -1,9 +1,9 @@
 const TeamCard = () => {
   return (
-    <div className="flex gap-4 justify-between">
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 justify-center gap-4 lg:justify-between">
       <div className="card rounded-lg overflow-hidden">
         <img
-          className="w-[250px] h-[250px]"
+          className="object-cover h-[250px]"
           src="https://partymaker.ancorathemes.com/wp-content/uploads/2017/10/team1-370x370.jpg"
           alt=""
         />
@@ -14,7 +14,7 @@ const TeamCard = () => {
       </div>
       <div className="card rounded-lg overflow-hidden">
       <img
-        className="w-[250px] h-[250px]"
+        className="object-cover h-[250px]"
         src="https://partymaker.ancorathemes.com/wp-content/uploads/2017/10/team4-370x370.jpg"
         alt=""
       />
@@ -25,7 +25,7 @@ const TeamCard = () => {
       </div>
       <div className="card rounded-lg overflow-hidden">
       <img
-        className="w-[250px] h-[250px]"
+        className="object-cover h-[250px]"
         src="https://partymaker.ancorathemes.com/wp-content/uploads/2017/10/team3-370x370.jpg"
         alt=""
       />
@@ -36,7 +36,7 @@ const TeamCard = () => {
       </div>
       <div className="card rounded-lg overflow-hidden">
       <img
-        className="w-[250px] h-[250px]"
+        className="object-cover h-[250px]"
         src="https://partymaker.ancorathemes.com/wp-content/uploads/2017/10/team2-370x370.jpg"
         alt=""
       />

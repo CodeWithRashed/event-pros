@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 // import required modules
 import { Autoplay, Pagination } from "swiper/modules";
 import { MainButton } from "../../Buttons/Buttons";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -34,20 +35,20 @@ const Banner = () => {
             style={{ backgroundImage: `url('${slider1Image}')` }}
           >
             <div className="text-content relative z-10 my-20 space-y-5">
-              <h3 className="text-5xl font-pacifico text-[#FFFFFF]">
+              <h3 className="text-2xl lg:text-5xl font-pacifico text-[#FFFFFF]">
                 Let&apos; have a party!
               </h3>
-              <h1 className="drop-shadow-xl text-9xl font-rubik text-color-primary font-bold">
+              <h1 className="drop-shadow-xl text-4xl lg:text-9xl font-rubik text-color-primary font-bold">
                 It&apos; time to <br />
                 celebrate!
               </h1>
               <div className="cta">
-                <MainButton buttonText="Get A Quote"></MainButton>
+                <Link to="/contact-us"><MainButton buttonText="Get A Quote"></MainButton></Link>
               </div>
             </div>
-            <div className="banner-images absolute bottom-32 -right-28 -z-0 flex gap-2">
+            <div className="banner-images hidden absolute bottom-32 -right-28 -z-0 lg:flex gap-2">
               <div className="image1 -rotate-6 p-4 pb-16 shadow-xl bg-[#FFFFFF] relative">
-                <img src={cardPhoto1} alt="" className="w-[300px] h-[300px]" />
+                <img src={cardPhoto1} alt="" className="w-[300px] h-[300px] " />
               </div>
               <div className="image2 rotate-6 -translate-x-36 -z-10 p-4 bg-[#FFFFFF] relative shadow-xl">
                 <img src={cardPhoto2} alt="" className="w-[300px] h-[300px]" />
@@ -64,15 +65,15 @@ const Banner = () => {
             style={{ backgroundImage: `url('${slider3Image}')` }}
           >
             <div className="text-content relative z-10 my-20 space-y-5">
-              <h3 className="text-5xl font-pacifico text-[#FFFFFF]">
+              <h3 className="text-2xl lg:text-5xl font-pacifico text-[#FFFFFF]">
                 We are here for you!
               </h3>
-              <h1 className="drop-shadow-xl text-9xl font-rubik text-color-primary font-bold">
+              <h1 className="drop-shadow-xl text-4xl lg:text-9xl font-rubik text-color-primary font-bold">
                 Concept to <br />
                 Celebration.
               </h1>
               <div className="cta">
-                <MainButton buttonText="Get A Quote"></MainButton>
+                <Link to="/contact-us"><MainButton buttonText="Get A Quote"></MainButton></Link>
               </div>
             </div>
           </div>
@@ -87,15 +88,15 @@ const Banner = () => {
           >
             {/* Your Event, Our Expertise. */}
             <div className="text-content relative z-10 my-20 space-y-5">
-              <h3 className="text-5xl font-pacifico text-[#FFFFFF]">
+              <h3 className="text-2xl lg:text-5xl font-pacifico text-[#FFFFFF]">
                 Elegance in Every Event
               </h3>
-              <h1 className="drop-shadow-xl text-9xl font-rubik text-color-primary font-bold">
+              <h1 className="drop-shadow-xl text-4xl lg:text-9xl font-rubik text-color-primary font-bold">
                 Enjoy your <br />
                 celebration!
               </h1>
               <div className="cta">
-                <MainButton buttonText="Get A Quote"></MainButton>
+                <Link to="/contact-us"><MainButton buttonText="Get A Quote"></MainButton></Link>
               </div>
             </div>
           </div>

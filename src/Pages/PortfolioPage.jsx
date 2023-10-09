@@ -8,15 +8,17 @@ const PortfolioPage = () => {
     <div>
       <PageHeader title="Portfolio"></PageHeader>
       <div className="p-[5%]">
-        <SectionTitle subtitle="See Our" title="Latest Events"></SectionTitle>
-        <Portfolios></Portfolios>
-        <div className="pt-[8%]">
+        <div className="pb-[8%]">
           <SectionTitle
             subtitle="See Our"
             title="Upcoming Events"
           ></SectionTitle>
+          <UpcomingProjects></UpcomingProjects>
         </div>
-        <UpcomingProjects></UpcomingProjects>
+        <div className="mb-10">
+          <SectionTitle subtitle="See Our" title="Latest Events"></SectionTitle>
+          <Portfolios></Portfolios>
+        </div>
       </div>
     </div>
   );

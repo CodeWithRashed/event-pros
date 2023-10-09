@@ -9,7 +9,7 @@ const ServiceContainer = () => {
       .catch((error) => console.log(error));
   return (
     <div>
-      <div className="service-container grid grid-cols-3  gap-5">
+      <div className="service-container grid lg:grid-cols-3  gap-5">
         {data.map((service) => (
           <div key={service.id}>
             <ServiceCard service={service}></ServiceCard>

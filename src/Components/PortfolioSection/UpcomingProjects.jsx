@@ -1,6 +1,6 @@
 const UpcomingProjects = () => {
   return (
-    <div className="grid grid-cols-3 gap-5">
+    <div className="grid lg:grid-cols-3 gap-5">
       <div className="bg-[#fff] rounded-lg shadow-lg hover:shadow-md hover:scale-[103%] transition-all ease-in-out">
         <div className="image w-84 h-56 overflow-hidden relative">
             <div className="overly absolute bg-color-main/[.80] flex justify-center items-center h-full w-full">

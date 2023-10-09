@@ -115,7 +115,7 @@ const Navbar = () => {
         {/* Navbar Start Part */}
         <div className="flex-1">
           <NavLink to="/" className="logo">
-            <img src={Logo} alt="" className="h-20" />
+            <img src={Logo} alt="" className="h-12 lg:h-20" />
           </NavLink>
         </div>
         {/* Start Part End */}
