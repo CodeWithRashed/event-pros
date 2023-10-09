@@ -21,9 +21,9 @@ const UserAuthFormPage = () => {
   }
 
   return (
-    <div className="main mb-20  py-[5%]">
-      <div className="bg-[#FFF] shadow-xl w-[520px] mx-auto">
-        <div className="authCtaContainer shadow-lg flex justify-around w-[520px]">
+    <div className="main mb-20  p-[5%]">
+      <div className="bg-[#FFF] shadow-xl lg:w-[520px] mx-auto">
+        <div className="authCtaContainer shadow-lg flex justify-around lg:w-[520px]">
           <div
             className={`login-info text-center w-1/2 py-1 transition-all ease-in-out ${
               toggle ? "bg-color-secondary text-[#fff]" : ""
