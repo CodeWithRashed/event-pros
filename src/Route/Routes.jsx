@@ -23,7 +23,7 @@ const Routes = createBrowserRouter([
       { path: "/services/:id", element: <PrivateRoute><SingleServicePage></SingleServicePage></PrivateRoute> },
       { path: "/portfolios", element: <PrivateRoute><PortfolioPage></PortfolioPage></PrivateRoute> },
       { path: "/blogs", element: <BLogsPage></BLogsPage> },
-      { path: "/blogs/:id", element: <SingleBlog></SingleBlog> },
+      { path: "/blogs/:id", element: <PrivateRoute><SingleBlog></SingleBlog></PrivateRoute> },
       { path: "/team", element: <PrivateRoute><TeamPage></TeamPage></PrivateRoute> },
       { path: "/contact-us", element: <ContactUsPage></ContactUsPage> },
       { path: "/login", element: <UserAuthFormPage></UserAuthFormPage> },

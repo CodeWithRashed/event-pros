@@ -1,11 +1,13 @@
 import { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { AuthDataContext } from "../../ContextApi/DataContext";
 import toast from "react-hot-toast";
 
 const Login = ({ handleClick }) => {
   const { userSignIn, googleSignIn } = useContext(AuthDataContext);
   const [errorMessage, setErrorMessage] = useState("")
+  const location = useLocation()
+  console.log("log", location)
   const navigator = useNavigate()
 
   const handleSubmit = (event) => {
@@ -16,7 +18,7 @@ const Login = ({ handleClick }) => {
       .then(() => {
         toast.success('Login Successful, Redirecting..')
         setTimeout(() => {
-          navigator("/")
+          navigator(location.state ? location.state : "/")
         }, 2000);
       })
       .catch((error) => setErrorMessage(error.code));
@@ -72,7 +74,7 @@ const Login = ({ handleClick }) => {
           toast.success('Login Successful, Redirecting..')
 
           setTimeout(() => {
-            navigator("/")
+            navigator(location.state ? location.state : "/")
           }, 2000);
          })
       }}

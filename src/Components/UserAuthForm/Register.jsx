@@ -1,12 +1,14 @@
 import { useContext, useState } from "react";
 import { AuthDataContext } from "../../ContextApi/DataContext";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 
 const Register = ({ handleClick }) => {
   const [errorMessage, setErrorMessage] = useState("");
   const { createUser, googleSignIn, updateTheUser, setPhoto } =
     useContext(AuthDataContext);
+    const location = useLocation()
+
   const navigator = useNavigate();
 
   const handleSubmit = (event) => {
@@ -34,7 +36,7 @@ const Register = ({ handleClick }) => {
         });
         toast.success("Account Create Successful, Redirecting..");
         setTimeout(() => {
-          navigator("/")
+          navigator(location.state ? location.state : "/")
         }, 2000);
       })
       .catch((error) => setErrorMessage(error.code));
@@ -44,7 +46,7 @@ const Register = ({ handleClick }) => {
     googleSignIn().then(() => {
       toast.success("Login Successful, Redirecting..");
       setTimeout(() => {
-        navigator("/")
+        navigator(location.state ? location.state : "/")
       }, 2000);
     });
   };
