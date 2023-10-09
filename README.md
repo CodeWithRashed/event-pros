@@ -1,8 +1,16 @@
-# React + Vite
+## Event Pros Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live Link : [Vercel](https://event-pros.vercel.app/)
+Live Link: [Firebase](https://event-pros.web.app/)
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Project Features
+ - Unique Concept
+ - User Authentication
+- Google Login Method
+- Protected Routes
+- User Profile and Logout
+- Additional Private Routes
+- Responsive Design
+- Contact Form
+- Newsletter Submit
+- Toast Alert
