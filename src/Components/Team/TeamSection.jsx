@@ -4,7 +4,10 @@ import TeamCard from "./TeamCard";
 const TeamSection = () => {
   return (
     <div className="px-[5%] py-[5%]">
-      <SectionTitle></SectionTitle>
+      <SectionTitle
+      subtitle="Our best team"
+      title="Our Team of Professionals"
+      ></SectionTitle>
       <TeamCard></TeamCard>
     </div>
   );

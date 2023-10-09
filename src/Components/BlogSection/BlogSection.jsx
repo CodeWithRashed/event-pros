@@ -12,7 +12,10 @@ const BlogSection = () => {
 
   return (
     <div className="p-[5%] bg-[#fff]">
-      <SectionTitle></SectionTitle>
+      <SectionTitle
+      subtitle="Blog feed"
+      title="Our Latest Blog"
+      ></SectionTitle>
       <Blogs blogData={blogData}></Blogs>
     </div>
   );

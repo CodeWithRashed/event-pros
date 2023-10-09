@@ -8,10 +8,13 @@ const PortfolioPage = () => {
     <div>
       <PageHeader title="Portfolio"></PageHeader>
       <div className="p-[5%]">
-        <SectionTitle></SectionTitle>
+        <SectionTitle subtitle="See Our" title="Latest Events"></SectionTitle>
         <Portfolios></Portfolios>
         <div className="pt-[8%]">
-          <SectionTitle></SectionTitle>
+          <SectionTitle
+            subtitle="See Our"
+            title="Upcoming Events"
+          ></SectionTitle>
         </div>
         <UpcomingProjects></UpcomingProjects>
       </div>

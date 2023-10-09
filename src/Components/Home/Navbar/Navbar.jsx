@@ -7,7 +7,7 @@ import { ImUserPlus } from "react-icons/im";
 
 const Navbar = () => {
   const { user, userInfo, logoutUser, photo } = useContext(AuthDataContext);
-  console.log("navuser", userInfo);
+
   const navItems = (
     <div className="lg:flex gap-2 items-center mr-3 hidden font-bold">
       <NavLink
@@ -36,18 +36,13 @@ const Navbar = () => {
       >
         Blogs
       </NavLink>
-      <NavLink
-        className={({ isActive }) => (isActive ? "text-color-secondary" : "")}
-        to="/about"
-      >
-        About Us
-      </NavLink>
+
       {user && (
         <NavLink
           className={({ isActive }) => (isActive ? "text-color-secondary" : "")}
-          to="/quote"
+          to="/team"
         >
-          Get a Quote
+          Team
         </NavLink>
       )}
       <NavLink
@@ -61,7 +56,7 @@ const Navbar = () => {
 
   const navItemsMobile = (
     <div className="flex flex-col gap-2 items-center font-bold">
-    <NavLink
+      <NavLink
         className={({ isActive }) => (isActive ? "text-color-secondary" : "")}
         to="/"
       >
@@ -87,18 +82,13 @@ const Navbar = () => {
       >
         Blogs
       </NavLink>
-      <NavLink
-        className={({ isActive }) => (isActive ? "text-color-secondary" : "")}
-        to="/about"
-      >
-        About Us
-      </NavLink>
+
       {user && (
         <NavLink
           className={({ isActive }) => (isActive ? "text-color-secondary" : "")}
-          to="/quote"
+          to="/team"
         >
-          Get a Quote
+          Team
         </NavLink>
       )}
       <NavLink

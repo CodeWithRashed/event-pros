@@ -10,7 +10,10 @@ const PortfolioSection = () => {
   );
   return (
     <div className="bg-color-sub/[.15] p-[5%]">
-      <SectionTitle></SectionTitle>
+      <SectionTitle
+      subtitle="See Our"
+      title="Latest Events"
+      ></SectionTitle>
       <Portfolios exploreButton={exploreButton}></Portfolios>
     </div>
   );

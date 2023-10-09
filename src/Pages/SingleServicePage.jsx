@@ -16,7 +16,7 @@ const SingleServicePage = () => {
   }, []);
 
   const filteredData = mainData.filter((singleData) => singleData.id == id.id);
-  console.log(filteredData[0]?.packages);
+
 
   return (
     <div className="p-[5%] grid grid-cols-4 gap-5">
@@ -35,7 +35,10 @@ const SingleServicePage = () => {
         <h1 className="text-xl font-bold my-5">{filteredData[0]?.name}</h1>
         <p>{filteredData[0]?.paragraph}</p>
         <div className="packages my-10 bg-color-sub/[.15] py-10">
-          <SectionTitle></SectionTitle>
+          <SectionTitle
+        subtitle="Here is"
+        title="Best Package Available"
+      ></SectionTitle>
           <div className="package-card-container grid grid-cols-3 gap-3 px-8 ">
             {filteredData[0]?.packages.map((singlePackage, index) => (
               <div className="cards" key={index}>

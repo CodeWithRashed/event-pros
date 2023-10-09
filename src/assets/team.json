@@ -1,0 +1,101 @@
+{
+    "team": [
+      {
+        "id": 1,
+        "name": "Julia Mann",
+        "title": "Co Founder",
+        "email": "julia@example.com",
+        "image": "https://partymaker.ancorathemes.com/wp-content/uploads/2017/10/team1-600x600.jpg",
+        "expertise": "all"
+      },
+      {
+        "id": 2,
+        "name": "Sufi Gilmore",
+        "title": "Architect",
+        "email": "sufi@example.com",
+        "image": "https://partymaker.ancorathemes.com/wp-content/uploads/2017/10/team2-600x600.jpg",
+        "expertise": "all"
+      },
+      {
+        "id": 3,
+        "name": "Jessica Smith",
+        "title": "Designer",
+        "email": "jessica@example.com",
+        "image": "https://partymaker.ancorathemes.com/wp-content/uploads/2017/10/team3-600x600.jpg",
+        "expertise": "birthday-event"
+      },
+      {
+        "id": 4,
+        "name": "Ann Wagner",
+        "title": "Florist",
+        "email": "ann@example.com",
+        "image": "https://partymaker.ancorathemes.com/wp-content/uploads/2017/10/team4-600x600.jpg",
+        "expertise": "birthday-event"
+      },
+      {
+        "id": 5,
+        "name": "John Doe",
+        "title": "Event Planner",
+        "email": "john@example.com",
+        "image": "https://raki.wpengine.com/wp-content/uploads/2023/08/Team-5.webp",
+       "expertise": "all"
+      },
+      {
+        "id": 6,
+        "name": "Emily White",
+        "title": "Decorator",
+        "email": "emily@example.com",
+        "image": "https://raki.wpengine.com/wp-content/uploads/2023/08/Team-8.webp",
+       "expertise": "all"
+      },
+      {
+        "id": 7,
+        "name": "Mark Johnson",
+        "title": "Photographer",
+        "email": "mark@example.com",
+        "image": "https://raki.wpengine.com/wp-content/uploads/2023/08/Team-7.webp",
+       "expertise": "all"
+      },
+      {
+        "id": 8,
+        "name": "Linda Brown",
+        "title": "Caterer",
+        "email": "linda@example.com",
+        "image": "https://raki.wpengine.com/wp-content/uploads/2023/08/Team-6.webp",
+       "expertise": "all"
+      },
+      {
+        "id": 9,
+        "name": "Sam Wilson",
+        "title": "Entertainer",
+        "email": "sam@example.com",
+        "image": "https://raki.wpengine.com/wp-content/uploads/2023/08/Team-4.webp",
+       "expertise": "birthday-event"
+      },
+      {
+        "id": 10,
+        "name": "Grace Lee",
+        "title": "Musician",
+        "email": "grace@example.com",
+        "image": "https://raki.wpengine.com/wp-content/uploads/2023/08/Team-2.webp",
+       "expertise": "birthday-event"
+      },
+      {
+        "id": 11,
+        "name": "Mike Miller",
+        "title": "Videographer",
+        "email": "mike@example.com",
+        "image": "https://gaaga.wpengine.com/wp-content/uploads/2023/06/team-listing-image-8a.jpg",
+       "expertise": "all"
+      },
+      {
+        "id": 12,
+        "name": "Olivia Clark",
+        "title": "Baker",
+        "email": "olivia@example.com",
+        "image": "https://raki.wpengine.com/wp-content/uploads/2023/08/Team-1.webp",
+       "expertise": "birthday-event"
+      }
+    ]
+  }
+  
